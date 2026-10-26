@@ -55,16 +55,20 @@ Documents are linked, not stored in this repository.
 
 ## **Repository Structure**
 
-docs/         Week 1 deliverables and later documentation
-data/         Data notes (no copyrighted or restricted files committed)
-src/          Source code
-notebooks/    Colab notebooks
-evaluation/   Test sets and results
-prompts/      Prompt templates
+docs/ ------- Week 1 deliverables and later documentation
+
+data/ ------- Data notes (no copyrighted or restricted files committed)
+
+src/ -------- Source code
+
+notebooks/ -- Colab notebooks
+
+evaluation/ - Test sets and results
+
+prompts/ ---- Prompt templates
+
 
 ## **Weekly Progress**
 
-Week	      Focus	                      Deliverable	       Status
-
-Week 1:	    System map + project scope	README + docs	       ✅
+✅ Week 1:	System map + project scope	(README + docs)	       
 
