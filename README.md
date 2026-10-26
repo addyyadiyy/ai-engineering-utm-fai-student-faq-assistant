@@ -53,21 +53,6 @@ UTM FAI undergraduate students (Bachelor in Artificial Intelligence with Honours
 Documents are linked, not stored in this repository.
 
 
-## **Repository Structure**
-
-docs/ ------- Week 1 deliverables and later documentation
-
-data/ ------- Data notes (no copyrighted or restricted files committed)
-
-src/ -------- Source code
-
-notebooks/ -- Colab notebooks
-
-evaluation/ - Test sets and results
-
-prompts/ ---- Prompt templates
-
-
 ## Weekly Progress 
 | Week | Focus | Deliverable | Status | 
 |------|-------|-------------|--------| 
