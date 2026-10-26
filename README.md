@@ -63,8 +63,7 @@ evaluation/   Test sets and results
 prompts/      Prompt templates
 
 ## **Weekly Progress**
- <hr width="100%" size="2">
-Week	   Focus	                Deliverable	       Status
- <hr width="100%" size="2">
-W1	    System map + project scope	README + docs	✅
- <hr width="100%" size="2">
+
+Week	      Focus	                      Deliverable	       Status
+Week 1:	    System map + project scope	README + docs	       ✅
+
