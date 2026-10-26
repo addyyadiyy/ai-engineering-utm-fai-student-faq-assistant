@@ -1,6 +1,6 @@
 # **UTM FAI Student FAQ Assistant** 
 
-An AI assistant that answers UTM Faculty of Artificial Intelligence undergraduate students' questions about academic regulations and programme information, grounded in official public UTM documents.
+>An AI assistant that answers UTM Faculty of Artificial Intelligence undergraduate students' questions about academic regulations and programme information, grounded in official public UTM documents.
 
 
 ## **Problem Statement**
