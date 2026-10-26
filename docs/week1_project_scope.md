@@ -1,9 +1,9 @@
 # **Week 1 Project Scope: UTM FAI Student FAQ Assistant**
 
 
-# **Project Name:**	UTM FAI Student FAQ Assistant
+## **Project Name:**	UTM FAI Student FAQ Assistant
 
-# **Domain:**	Higher Education / Student Information (academic regulations and programme information)
+## **Domain:**	Higher Education / Student Information (academic regulations and programme information)
 
 
 ## **Problem Statement**
