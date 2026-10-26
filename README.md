@@ -65,5 +65,6 @@ prompts/      Prompt templates
 ## **Weekly Progress**
 
 Week	      Focus	                      Deliverable	       Status
+
 Week 1:	    System map + project scope	README + docs	       ✅
 
