@@ -1,0 +1,41 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-20T10:02:55.638235+00:00",
+  "data_type": "documents_S01_regulations",
+  "configuration": {
+    "chunk_size": 500,
+    "method": "paragraph-aware"
+  },
+  "processing_method": "paragraph-aware text chunks of 500 characters",
+  "sources": [
+    {
+      "path": "/content/week3_project/data/raw/FT-UG-ACADEMIC-REGULATIONS-16th-edition.pdf",
+      "sha256": "d2743dfad87d3be3393732e0416088ad62cf4afb9e6f7355eac47ab715de6a04"
+    }
+  ],
+  "outputs": [
+    "/content/week3_project/data/pipeline_v1/documents_S01_regulations/prepared_text.jsonl"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "/content/week3_project/data/raw/FT-UG-ACADEMIC-REGULATIONS-16th-edition.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents_S01_regulations/prepared_text.jsonl"
+    }
+  ],
+  "inspection": {
+    "source": "FT-UG-ACADEMIC-REGULATIONS-16th-edition.pdf",
+    "characters": 105212,
+    "pages": 81
+  },
+  "validation": {
+    "output_count": 1,
+    "output_sha256": [
+      "0b76758a29266df694733bc8c4c231936656ac089a67ef434225a56acf1534a1"
+    ],
+    "output_bytes": [
+      134248
+    ]
+  },
+  "source_version": "Not verified",
+  "access_rights": "Not verified — check before sharing"
+}
