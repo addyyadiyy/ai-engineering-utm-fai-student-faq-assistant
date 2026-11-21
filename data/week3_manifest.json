@@ -1,0 +1,28 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-20T10:02:51.887526+00:00",
+  "records": [
+    {
+      "source_id": "S01",
+      "source_filename": "FT-UG-ACADEMIC-REGULATIONS-16th-edition.pdf",
+      "source_sha256": "d2743dfad87d3be3393732e0416088ad62cf4afb9e6f7355eac47ab715de6a04",
+      "prepared_output": "data/processed/prepared_text_S01.jsonl",
+      "prepared_sha256": "189fea50182ee87d2cbf1bfefa3195c00589189da33b8accf7418e44ffec37c1",
+      "processing_note": "paragraph-aware-char-500",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    },
+    {
+      "source_id": "S02",
+      "source_filename": "Bachelor-in-Artificial-Intelligence-With-Honours-FAI-programme-page.pdf",
+      "source_sha256": "b8527fea695e284ed99daf5811ff31f0d7f0adb1c15bf12a9b01be6af8a69abf",
+      "prepared_output": "data/processed/prepared_text_S02.jsonl",
+      "prepared_sha256": "f8d99493790d4aa2f29246b218aa8cd2f6e53eab8e22d49ab73c64bf7442d84f",
+      "processing_note": "paragraph-aware-char-500",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    }
+  ]
+}
