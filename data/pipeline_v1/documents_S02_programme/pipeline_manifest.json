@@ -1,0 +1,41 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-20T10:02:56.175409+00:00",
+  "data_type": "documents_S02_programme",
+  "configuration": {
+    "chunk_size": 500,
+    "method": "paragraph-aware"
+  },
+  "processing_method": "paragraph-aware text chunks of 500 characters",
+  "sources": [
+    {
+      "path": "/content/week3_project/data/raw/Bachelor-in-Artificial-Intelligence-With-Honours-FAI-programme-page.pdf",
+      "sha256": "b8527fea695e284ed99daf5811ff31f0d7f0adb1c15bf12a9b01be6af8a69abf"
+    }
+  ],
+  "outputs": [
+    "/content/week3_project/data/pipeline_v1/documents_S02_programme/prepared_text.jsonl"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "/content/week3_project/data/raw/Bachelor-in-Artificial-Intelligence-With-Honours-FAI-programme-page.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents_S02_programme/prepared_text.jsonl"
+    }
+  ],
+  "inspection": {
+    "source": "Bachelor-in-Artificial-Intelligence-With-Honours-FAI-programme-page.pdf",
+    "characters": 22276,
+    "pages": 14
+  },
+  "validation": {
+    "output_count": 1,
+    "output_sha256": [
+      "88b8b9095440097a9ff234fe08da68af5e601db2659d206567c4a9367211404c"
+    ],
+    "output_bytes": [
+      31867
+    ]
+  },
+  "source_version": "Not verified",
+  "access_rights": "Not verified — check before sharing"
+}
