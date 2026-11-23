@@ -58,4 +58,6 @@ UTM FAI undergraduate students (Bachelor in Artificial Intelligence with Honours
 | W1 | System map + project scope | README + docs | ✅ |   
 | W2 | Requirements, evaluation criteria, V1 architecture | docs/week2_requirements.md, docs/week2_evaluation_criteria.md, docs/week2_architecture_v1.png, docs/week2_architecture_decisions.md | ✅ |
 | W3 | Data pipeline V1 (ingest, inspect, prepare, validate, lineage) | notebook, inventory, diagram, decisions, manifest | ✅ |
+| W4 | Data quality audit and responsible data assessment | [report](docs/week4_data_quality_report.pdf), [checks notebook](notebooks/week4_quality_checks.ipynb), [results](data/quality/quality_results.json) | ✅ |
+
 
