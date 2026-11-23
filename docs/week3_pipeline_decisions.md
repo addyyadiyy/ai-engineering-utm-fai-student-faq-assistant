@@ -59,12 +59,12 @@ Blank-line paragraph segments found: 64. Of these, 11 are longer than 500 charac
 - Text extraction with `pypdf` (all pages, joined with newlines).
 - Cleaning: collapse repeated spaces and tabs, then strip the ends. Nothing else is removed or rewritten.
 - Chunking: **paragraph-aware**, 500 characters, for both sources.
-- Each record keeps `record_id`, `text`, `source`, `source_sha256`, `processing` and `page` (= `None`).
+- Each record in data/processed/ keeps record_id, text, source, source_sha256, processing and page (= None). The pipeline_v1 records keep only id, source, text and page, and source there is an absolute Colab path.
 
 ## Accepted limitations
 
 - S01: only 14 paragraph segments exist in 105,132 characters, and 5 of them are longer than 500 characters, so the paragraph-aware method behaves almost like fixed-size splitting. About 82% of S01 chunks still start in the middle of a sentence. Better splitting (by Article heading) is left for a later topic.
-- S01: 7 of 81 pages (1, 2, 3, 11, 13, 15, 81) returned no text. They are probably cover, divider or image pages, but this has not been checked against the PDF. The edition number cannot be read from the extracted text, so the version is recorded as `Not verified`.
+- S01: S01: 7 of 81 pages (1, 2, 3, 11, 13, 15, 81) returned no text. Checked against the PDF: pp. 1 and 81 are the front and back covers (images), p. 2 is a graphic title page, and pp. 3, 11, 13 and 15 are blank, so no rule text is missing. The title and “16th Edition” on pp. 2 and 4 are graphics, so they are not in the extracted text. The cover and title page say “16th Edition” but the copyright page (p. 5) says “First Edition 2026”. The PDF contradicts itself, so the version stays recorded as Not verified. S01: chunks #1 and #2 (PDF p. 4) contain font-glyph codes (/gid00006/...) instead of the editors’ names. They are unreadable and need review.
 - S01: the running header `Academic Regulations`, the `Section N` lines and page numbers stay inside chunks, because the lab's V1 cleaning only collapses spaces and tabs.
 - S01: tables are flattened into lines of text without a grid, so a table row can be separated from its heading.
 - S02: the web page was saved as a PDF, so the site header (`Copyright © 2026 Faculty of Artificial Intelligence ...`) and menu text were extracted with the content. The copyright line appears on 7 of the 14 pages and is inside 7 of the 57 chunks.
