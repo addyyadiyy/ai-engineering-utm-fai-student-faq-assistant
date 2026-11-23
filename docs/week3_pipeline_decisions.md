@@ -66,9 +66,10 @@ Blank-line paragraph segments found: 64. Of these, 11 are longer than 500 charac
 - S01: only 14 paragraph segments exist in 105,132 characters, and 5 of them are longer than 500 characters, so the paragraph-aware method behaves almost like fixed-size splitting. About 82% of S01 chunks still start in the middle of a sentence. Better splitting (by Article heading) is left for a later topic.
 - S01: S01: 7 of 81 pages (1, 2, 3, 11, 13, 15, 81) returned no text. Checked against the PDF: pp. 1 and 81 are the front and back covers (images), p. 2 is a graphic title page, and pp. 3, 11, 13 and 15 are blank, so no rule text is missing. The title and “16th Edition” on pp. 2 and 4 are graphics, so they are not in the extracted text. The cover and title page say “16th Edition” but the copyright page (p. 5) says “First Edition 2026”. The PDF contradicts itself, so the version stays recorded as Not verified. S01: chunks #1 and #2 (PDF p. 4) contain font-glyph codes (/gid00006/...) instead of the editors’ names. They are unreadable and need review.
 - S01: the running header `Academic Regulations`, the `Section N` lines and page numbers stay inside chunks, because the lab's V1 cleaning only collapses spaces and tabs.
-- S01: tables are flattened into lines of text without a grid, so a table row can be separated from its heading.
+- S01: tables are flattened into lines of text without a grid, so a table row can be separated from its heading. Example: Table 1 on PDF p. 26 is split across chunks #46 (caption and notes), #47 (rows) and #48 (short semester and the 42-week total).
 - S02: the web page was saved as a PDF, so the site header (`Copyright © 2026 Faculty of Artificial Intelligence ...`) and menu text were extracted with the content. The copyright line appears on 7 of the 14 pages and is inside 7 of the 57 chunks.
 - S02: pages 7 and 8 are an admission-requirements table written in Malay for the 2024/2025 academic session. It is older than the 2026 regulations and is in a different language from the rest of the page. Answers that use it need a date caveat.
+- S02: the PDF mixes 2026 FAI text with 2024 admission pages (pp. 12–13, “Copyright © 2024”). It also contains figures that conflict or look wrong: p. 4 says 46 credit hours (CGPA 3.0) while p. 14 says 121 credits; p. 13 lists the AI programme as “6 Semester” while p. 14 says “3 Years”; p. 11 has the typo “USD 12,3000”. The international fee table (p. 11) and the local one (p. 13) are undated. These need confirming with the faculty before fee, credit or duration answers are trusted.
 - S02: paragraph-aware splitting produces 4 very short chunks (under 50 characters), such as ` Contact`. They add noise but are kept in V1.
 - Neither source keeps page numbers in the prepared records (`page` = `None`), so page-level citation is not possible yet.
 
@@ -106,5 +107,5 @@ Run evidence: S01 prepared SHA-256 `189fea50182ee87d...` (165,241 bytes), pipeli
 |---|---|---|---|
 | O2 | FR1, FR4 / NFR2 | Official UTM Documents → Knowledge Access | `data/pipeline_v1/documents_S01_regulations/prepared_text.jsonl` (213 chunks) |
 | O2 | FR1, FR2 | Official UTM Documents → Knowledge Access | `data/pipeline_v1/documents_S02_programme/prepared_text.jsonl` (57 chunks) |
-| O2 | FR3 / RAI1 | Source reference | `source` and `source_sha256` in every record; `data/week3_manifest.json` |
+| O2 | FR3 / RAI1 | Source reference | `source` and `source_sha256` in every data/processed/record; pipeline_v1 stores the SHA-256 in its manifests;`data/week3_manifest.json` |
 | O3 | RAI3 / NFR4 | Source version, repeatable update | Manifest `source_version: Not verified`; Cell 9 repeatability check |
