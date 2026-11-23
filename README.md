@@ -50,7 +50,7 @@ UTM FAI undergraduate students (Bachelor in Artificial Intelligence with Honours
 
 - FAI Undergraduate Registration Kit: https://fai.utm.my/undergraduate-registration-kit/
 
-Documents are linked, not stored in this repository.
+Documents are linked, not stored in this repository. (not used in the pipeline)
 
 
 ## Weekly Progress 
