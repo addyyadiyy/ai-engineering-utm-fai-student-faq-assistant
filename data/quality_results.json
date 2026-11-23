@@ -1,0 +1,125 @@
+{
+  "generated_utc": "2026-11-23T09:50:18+00:00",
+  "pipeline_version": "week3-v1",
+  "rules": {
+    "rule1_readable_text": {
+      "problem": "Extraction damage: font-glyph codes instead of words",
+      "condition": "chunk text contains '/gid' followed by 5 digits",
+      "action": "Send failed chunks to a person for review; rebuild by hand or exclude",
+      "per_source": {
+        "S01": {
+          "chunks": 213,
+          "failed": 2,
+          "failed_chunk_numbers": [
+            1,
+            2
+          ],
+          "glyph_share_of_failed_chars_pct": 94.6
+        },
+        "S02": {
+          "chunks": 57,
+          "failed": 0,
+          "failed_chunk_numbers": [],
+          "glyph_share_of_failed_chars_pct": null
+        }
+      }
+    },
+    "rule2_page_reference": {
+      "problem": "Chunk cannot be cited to a source page (R2, FR3)",
+      "condition": "'page' is not empty (also checks record_id, text, source, source_sha256)",
+      "action": "Re-extract page by page so each chunk stores its page, then re-run",
+      "per_source": {
+        "S01": {
+          "chunks": 213,
+          "failed_page_empty": 213,
+          "missing_by_field": {
+            "record_id": 0,
+            "text": 0,
+            "source": 0,
+            "source_sha256": 0,
+            "page": 213
+          }
+        },
+        "S02": {
+          "chunks": 57,
+          "failed_page_empty": 57,
+          "missing_by_field": {
+            "record_id": 0,
+            "text": 0,
+            "source": 0,
+            "source_sha256": 0,
+            "page": 57
+          }
+        }
+      }
+    }
+  },
+  "supporting_checks": {
+    "S01": {
+      "chunks": 213,
+      "empty_text": 0,
+      "duplicate_groups": 0,
+      "under_50_chars": [],
+      "boilerplate_chunks": [
+        1,
+        4
+      ],
+      "start_lowercase": 175,
+      "start_lowercase_pct": 82.2,
+      "processed_vs_pipeline_text_identical": true
+    },
+    "S02": {
+      "chunks": 57,
+      "empty_text": 0,
+      "duplicate_groups": 0,
+      "under_50_chars": [
+        6,
+        30,
+        42,
+        43
+      ],
+      "boilerplate_chunks": [
+        1,
+        7,
+        10,
+        40,
+        49,
+        52,
+        56
+      ],
+      "start_lowercase": 20,
+      "start_lowercase_pct": 35.1,
+      "processed_vs_pipeline_text_identical": true
+    }
+  },
+  "pdf_checks": {
+    "S01": {
+      "status": "ok",
+      "pdf": "data/raw/FT-UG-ACADEMIC-REGULATIONS-16th-edition.pdf",
+      "pages": 81,
+      "sha256_matches_manifest": true,
+      "pages_with_no_text": [
+        1,
+        2,
+        3,
+        11,
+        13,
+        15,
+        81
+      ],
+      "chunks_found_on_one_page": 143,
+      "chunks_crossing_a_page_break": 70,
+      "chunks_not_found_in_pdf_text": []
+    },
+    "S02": {
+      "status": "ok",
+      "pdf": "data/raw/Bachelor-in-Artificial-Intelligence-With-Honours-FAI-programme-page.pdf",
+      "pages": 14,
+      "sha256_matches_manifest": true,
+      "pages_with_no_text": [],
+      "chunks_found_on_one_page": 52,
+      "chunks_crossing_a_page_break": 5,
+      "chunks_not_found_in_pdf_text": []
+    }
+  }
+}
