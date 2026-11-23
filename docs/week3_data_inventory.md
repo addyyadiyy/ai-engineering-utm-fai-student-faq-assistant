@@ -25,7 +25,7 @@ Source type: unstructured text (PDF). Dataset used: **real project sources, not 
 ## Observed ingestion limitations (from Step A3 evidence)
 
 **S01 (regulations)**
-- Extraction worked on every page that has text. Characters per page: min 0, median 1553, max 2402. 7 pages returned no text (1, 2, 3, 11, 13, 15, 81).
+- Extraction worked on every page that has text. Characters per page: min 0, median 1553, max 2402. 7 pages returned no text (1, 2, 3, 11, 13, 15, 81). These are covers, a graphic title page and blank pages, so no rule text is missing.
 - Repeated lines (digits shown as `#`): `#` (63 pages), `Academic Regulations` (32 pages), `Section #` (22 pages). They stay inside chunks, because the lab's V1 cleaning only collapses spaces and tabs.
 - Tables are flattened into plain lines with no grid. 11 table captions were found.
 - Only 10 blank-line paragraph breaks exist in the whole document, and 44 lines start with `Article N`. Hyphenated line breaks: 11.
