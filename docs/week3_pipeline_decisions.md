@@ -6,7 +6,7 @@
 |---|---|
 | FR1, FR4, NFR2 | Answers must come from official regulation text, so the text has to be extracted and split into usable passages (S01). |
 | FR1, FR2 | Programme facts (structure, admission, fees) come from the FAI programme page (S02). |
-| FR3, RAI1 | Every prepared passage carries the source file name and SHA-256 so it can be traced back to the official document. |
+| FR3, RAI1 | Every passage in data/processed/ carries the source file name and SHA-256 so it can be traced back to the official document. The pipeline_v1 output files keep only source and id; their SHA-256 is recorded in each pipeline_manifest.json. |
 | RAI3 | Manifests record the source version as `Not verified`, so version claims are not made without evidence. |
 | NFR4 | The pipeline is a notebook that can be re-run when a source changes, and Cell 9 checks that a re-run gives the same results. |
 
